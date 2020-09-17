@@ -2,6 +2,8 @@
 
 a open source component code for show EasyV Cli
 
+watch online: [power meter](https://easyv.dtstack.com/workspace/shareScreen/eyJzY3JlZW5JZCI6MzIzOTJ9)
+
 # Install & Usage
 
 * Install [node.js](https://nodejs.org/en/).
