@@ -1,0 +1,23 @@
+{
+  "name": "easyvc-power-meter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "the code of power meter component which in the easyV platform",
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "scripts": {
+    "start": "easyv dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "easyv": {
+    "components": "src/components",
+    "builder": "react-component-builder"
+  },
+  "dependencies": {
+    "@easyv/utils": "^0.0.9",
+    "d3": "^6.1.1",
+    "popmotion": "^8.7.5"
+  }
+}

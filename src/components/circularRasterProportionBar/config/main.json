@@ -1,0 +1,509 @@
+{
+  "base": {
+    "name": "圆形栅格占比",
+    "module_name": "circularRasterProportionBar",
+    "category": "指标",
+    "version": "1.0.1"
+  },
+  "configuration": [
+    {
+      "_name": "chart",
+      "_displayName": "组件",
+      "_value": [
+        {
+          "_name": "dimension",
+          "_displayName": "位置尺寸",
+          "_value": [
+            {
+              "_name": "chartPosition",
+              "_displayName": "图表位置",
+              "_value": [
+                {
+                  "_name": "left",
+                  "_displayName": "X轴坐标",
+                  "_labelLayout": 24,
+                  "_labelPosition": "bottom",
+                  "_value": 100
+                },
+                {
+                  "_name": "top",
+                  "_labelLayout": 24,
+                  "_labelPosition": "bottom",
+                  "_displayName": "Y轴坐标",
+                  "_value": 100
+                }
+              ],
+              "_labelLayout": 8
+            },
+            {
+              "_name": "chartDimension",
+              "_displayName": "图表尺寸",
+              "_value": [
+                {
+                  "_name": "width",
+                  "_displayName": "宽度",
+                  "_labelLayout": 24,
+                  "_labelPosition": "bottom",
+                  "_value": 400
+                },
+                {
+                  "_name": "height",
+                  "_displayName": "高度",
+                  "_labelLayout": 24,
+                  "_labelPosition": "bottom",
+                  "_value": 400
+                }
+              ],
+              "_labelLayout": 8
+            }
+          ]
+        },
+        {
+          "_name": "component",
+          "_displayName": "全局样式",
+          "_value": [
+            {
+              "_name": "ringConfig",
+              "_displayName": "圆环配置",
+              "_value": [
+                {
+                  "_name": "radiusConfig",
+                  "_displayName": "半径配置",
+                  "_value": [
+                    {
+                      "_name": "radiusOut",
+                      "_displayName": "外圆半径",
+                      "_type": "number",
+                      "_value": 150
+                    },
+                    {
+                      "_name": "radiusIn",
+                      "_displayName": "内圆半径",
+                      "_type": "number",
+                      "_value": 130
+                    }
+                  ]
+                },
+                {
+                  "_name": "angleConfig",
+                  "_displayName": "角度配置",
+                  "_value": [
+                    {
+                      "_name": "startPoint",
+                      "_displayName": "开始角度",
+                      "_type": "number",
+                      "_value": 210
+                    },
+                    {
+                      "_name": "endPoint",
+                      "_displayName": "结束角度",
+                      "_type": "number",
+                      "_value": -30
+                    },
+                    {
+                      "_name": "segmentalCount",
+                      "_displayName": "分段数",
+                      "_type": "number",
+                      "_value": 30,
+                      "_min": 2
+                    },
+                    {
+                      "_name": "segmentalAngle",
+                      "_displayName": "分段角度",
+                      "_type": "number",
+                      "_value": 1.5,
+                      "_min": 0,
+                      "_max": 360,
+                      "_step": 0.1
+                    }
+                  ]
+                },
+                {
+                  "_name": "colorConfig",
+                  "_displayName": "颜色设置",
+                  "_value": [
+                    {
+                      "_name": "startColor",
+                      "_displayName": "开始颜色",
+                      "_type": "color",
+                      "_value": "RGBA(24,144,255,1)"
+                    },
+                    {
+                      "_name": "endColor",
+                      "_displayName": "结束颜色",
+                      "_type": "color",
+                      "_value": "RGBA(6,252,252,1)"
+                    },
+                    {
+                      "_name": "baseColor",
+                      "_displayName": "低色",
+                      "_type": "color",
+                      "_value": "RGBA(186,231,255,0.2)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_name": "textConfig",
+              "_displayName": "文字配置",
+              "_value": [
+                {
+                  "_name": "offsetConfig",
+                  "_displayName": "偏移配置",
+                  "_value": [
+                    {
+                      "_name": "x",
+                      "_displayName": "X",
+                      "_type": "number",
+                      "_value": 0
+                    },
+                    {
+                      "_name": "y",
+                      "_displayName": "Y",
+                      "_type": "number",
+                      "_value": -20
+                    }
+                  ]
+                },
+                {
+                  "_name": "numberConfig",
+                  "_displayName": "数字配置",
+                  "_value": [
+                    {
+                      "_name": "fontFamily",
+                      "_displayName": "字体",
+                      "_value": "manrope-bold",
+                      "_type": "font"
+                    },
+                    {
+                      "_name": "fontSize",
+                      "_displayName": "字号",
+                      "_type": "number",
+                      "_value": 50
+                    },
+                    {
+                      "_name": "color",
+                      "_displayName": "颜色",
+                      "_value": "RGBA(255,255,255,1)",
+                      "_type": "color"
+                    },
+                    {
+                      "_name": "decimalPoint",
+                      "_displayName": "小数点",
+                      "_value": 1,
+                      "_type": "number"
+                    },
+                    {
+                      "_name": "shadow",
+                      "_displayName": "阴影",
+                      "_value": true,
+                      "_type": "boolean"
+                    },
+                    {
+                      "_rule": [
+                        [
+                          "shadow",
+                          "$eq",
+                          true
+                        ]
+                      ],
+                      "_name": "shadowColor",
+                      "_displayName": "阴影颜色",
+                      "_value": "RGBA(24,94,255,1)",
+                      "_type": "color"
+                    },
+                    {
+                      "_rule": [
+                        [
+                          "shadow",
+                          "$eq",
+                          true
+                        ]
+                      ],
+                      "_name": "shadowH",
+                      "_displayName": "水平位置",
+                      "_value": 0,
+                      "_type": "number"
+                    },
+                    {
+                      "_rule": [
+                        [
+                          "shadow",
+                          "$eq",
+                          true
+                        ]
+                      ],
+                      "_name": "shadowV",
+                      "_displayName": "垂直位置",
+                      "_value": 0,
+                      "_type": "number"
+                    },
+                    {
+                      "_rule": [
+                        [
+                          "shadow",
+                          "$eq",
+                          true
+                        ]
+                      ],
+                      "_name": "shadowBlur",
+                      "_displayName": "模糊",
+                      "_value": 15,
+                      "_type": "number"
+                    }
+                  ]
+                },
+                {
+                  "_name": "percentConfig",
+                  "_displayName": "后缀配置",
+                  "_value": [
+                    {
+                      "_name": "fontFamily",
+                      "_displayName": "字体",
+                      "_value": "manrope-bold",
+                      "_type": "font"
+                    },
+                    {
+                      "_name": "fontSize",
+                      "_displayName": "字号",
+                      "_type": "number",
+                      "_value": 30
+                    },
+                    {
+                      "_name": "color",
+                      "_displayName": "颜色",
+                      "_value": "#ffffff",
+                      "_type": "color"
+                    },
+                    {
+                      "_name": "marginLeft",
+                      "_displayName": "偏移",
+                      "_type": "number",
+                      "_value": 5
+                    },
+                    {
+                      "_name": "shadow",
+                      "_displayName": "阴影",
+                      "_value": true,
+                      "_type": "boolean"
+                    },
+                    {
+                      "_rule": [
+                        [
+                          "shadow",
+                          "$eq",
+                          true
+                        ]
+                      ],
+                      "_name": "shadowColor",
+                      "_displayName": "阴影颜色",
+                      "_value": "RGBA(24,94,255,1)",
+                      "_type": "color"
+                    },
+                    {
+                      "_rule": [
+                        [
+                          "shadow",
+                          "$eq",
+                          true
+                        ]
+                      ],
+                      "_name": "shadowH",
+                      "_displayName": "水平位置",
+                      "_value": 0,
+                      "_type": "number"
+                    },
+                    {
+                      "_rule": [
+                        [
+                          "shadow",
+                          "$eq",
+                          true
+                        ]
+                      ],
+                      "_name": "shadowV",
+                      "_displayName": "垂直位置",
+                      "_value": 0,
+                      "_type": "number"
+                    },
+                    {
+                      "_rule": [
+                        [
+                          "shadow",
+                          "$eq",
+                          true
+                        ]
+                      ],
+                      "_name": "shadowBlur",
+                      "_displayName": "模糊",
+                      "_value": 15,
+                      "_type": "number"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_name": "motionConfig",
+          "_displayName": "动效配置",
+          "_value": [
+            {
+              "_displayName": "开启动效",
+              "_name": "motionEnable",
+              "_value": true,
+              "_type": "boolean"
+            },
+            {
+              "_rule": [
+                [
+                  "motionEnable",
+                  "$eq",
+                  true
+                ]
+              ],
+              "_displayName": "应用字段",
+              "_name": "motionKey",
+              "_value": "value",
+              "_type": "select",
+              "_options": [
+                {
+                  "name": "value",
+                  "value": "value"
+                }
+              ]
+            },
+            {
+              "_rule": [
+                [
+                  "motionEnable",
+                  "$eq",
+                  true
+                ]
+              ],
+              "_displayName": "动效类型",
+              "_name": "motionType",
+              "_value": "1",
+              "_type": "radio",
+              "_options": [
+                {
+                  "name": "线性",
+                  "value": "1"
+                },
+                {
+                  "name": "物理",
+                  "value": "2"
+                }
+              ]
+            },
+            {
+              "_rule": [
+                [
+                  "motionEnable",
+                  "$eq",
+                  true
+                ],
+                [
+                  "motionType",
+                  "$eq",
+                  "1"
+                ]
+              ],
+              "_displayName": "时长",
+              "_name": "duration",
+              "_value": 2500,
+              "_type": "number"
+            },
+            {
+              "_rule": [
+                [
+                  "motionEnable",
+                  "$eq",
+                  true
+                ],
+                [
+                  "motionType",
+                  "$eq",
+                  "2"
+                ]
+              ],
+              "_displayName": "弹性",
+              "_name": "stiffness",
+              "_value": 100,
+              "_type": "number"
+            },
+            {
+              "_rule": [
+                [
+                  "motionEnable",
+                  "$eq",
+                  true
+                ],
+                [
+                  "motionType",
+                  "$eq",
+                  "2"
+                ]
+              ],
+              "_displayName": "阻尼",
+              "_name": "damping",
+              "_value": 10,
+              "_type": "number"
+            },
+            {
+              "_rule": [
+                [
+                  "motionEnable",
+                  "$eq",
+                  true
+                ],
+                [
+                  "motionType",
+                  "$eq",
+                  "2"
+                ]
+              ],
+              "_displayName": "质量",
+              "_name": "mass",
+              "_value": 1,
+              "_type": "number"
+            },
+            {
+              "_rule": [
+                [
+                  "motionEnable",
+                  "$eq",
+                  true
+                ]
+              ],
+              "_displayName": "模拟动效",
+              "_name": "simulative",
+              "_value": true,
+              "_type": "boolean"
+            },
+            {
+              "_rule": [
+                [
+                  "motionEnable",
+                  "$eq",
+                  true
+                ],
+                [
+                  "simulative",
+                  "$eq",
+                  true
+                ]
+              ],
+              "_displayName": "起始值",
+              "_name": "startValue",
+              "_value": 0,
+              "_type": "number"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

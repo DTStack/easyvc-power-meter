@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "value": 0.834,
+      "suffix": "%"
+    }
+  ],
+  "fields": [
+    {
+      "name": "value",
+      "value": "value",
+      "desc": "值"
+    }
+  ]
+}
