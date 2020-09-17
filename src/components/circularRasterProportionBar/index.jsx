@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as d3 from 'd3';
+import { interpolateRgb, scaleLinear } from 'd3';
 import { reduceConfig } from "@easyv/utils/lib/common/reduce-config";
 import { spring, tween, parallel } from 'popmotion';
 export default class CircularRasterProportionBar extends Component {
@@ -118,8 +118,8 @@ export default class CircularRasterProportionBar extends Component {
       return d;
     }
 
-    const colorInter = d3.interpolateRgb(colorConfig.startColor, colorConfig.endColor);
-    const colorScale = d3.scaleLinear().domain([0, segmentalCount]).range([0, 1]);
+    const colorInter = interpolateRgb(colorConfig.startColor, colorConfig.endColor);
+    const colorScale = scaleLinear().domain([0, segmentalCount]).range([0, 1]);
     const valueCount = data && data[0] && data[0].value !== undefined ? Math.round(data[0].value * segmentalCount) : 0;
     let backgroundList = [];
     let list2 = [];

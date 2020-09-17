@@ -2,7 +2,7 @@
   "name": "easyvc-power-meter",
   "version": "0.1.0",
   "private": true,
-  "description": "the code of power meter component which in the easyV platform",
+  "description": "a open source component code for show EasyV cli",
   "engines": {
     "node": ">=12.13.0"
   },
